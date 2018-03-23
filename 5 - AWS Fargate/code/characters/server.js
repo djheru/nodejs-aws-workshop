@@ -43,6 +43,7 @@ router.get('/api/characters/by-occupation/:occupation', function *() {
 router.get('/api/characters/butts', function* () {
   try {
     const res = axios.get('http://52.90.203.44/api/locations');
+    console.log(res);
     this.body = (res && res.data) ? res.data : { ohai3: 'lolwut' };
   } catch (e) {
     this.body = { ohai: e.message };
