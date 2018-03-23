@@ -19,6 +19,15 @@ router.get('/api/locations/:id', function *() {
   this.body = db.locations.find((location) => location.id === id);
 });
 
+router.get('/api/locations/butts', function* () {
+  try {
+    const res = axios.get('/api/characters');
+    this.body = (res && res.data) ? res.data : { ohai: 'lolwut' };
+  } catch (e) {
+    this.body = { ohai: e.message };
+  }
+});
+
 router.get('/api/', function *() {
   this.body = 'API ready to receive requests';
 });

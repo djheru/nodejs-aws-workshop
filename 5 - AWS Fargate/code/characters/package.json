@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "axios": "^0.18.0",
     "koa": "^1.2.5",
     "koa-router": "^5.4.0"
   },

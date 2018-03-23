@@ -39,6 +39,15 @@ router.get('/api/characters/by-occupation/:occupation', function *() {
   this.body = db.characters.filter((character) => character.occupations.includes(occupation));
 });
 
+router.get('/api/characters/butts', function* () {
+  try {
+    const res = axios.get('/api/locations');
+    this.body = (res && res.data) ? res.data : { ohai: 'lolwut' };
+  } catch (e) {
+    this.body = { ohai: e.message };
+  }
+});
+
 router.get('/', function *() {
   this.body = 'Ready to receive requests';
 });
