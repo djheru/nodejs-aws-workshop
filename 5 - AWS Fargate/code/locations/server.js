@@ -1,6 +1,7 @@
 const app = require('koa')();
 const router = require('koa-router')();
 const db = require('./db.json');
+const axios = require('axios');
 
 // Log requests
 app.use(function *(next) {
