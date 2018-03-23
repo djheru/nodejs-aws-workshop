@@ -22,8 +22,8 @@ router.get('/api/locations/:id', function *() {
 
 router.get('/api/locations/butts', function* () {
   try {
-    const res = axios.get('http://127.0.0.1/api/characters');
-    this.body = (res && res.data) ? res.data : { ohai2: 'lolwut' };
+    const res = axios.get('http://54.165.150.6/api/characters');
+    this.body = (res && res.data) ? res.data : { ohai3: 'lolwut' };
   } catch (e) {
     this.body = { ohai: e.message };
   }
